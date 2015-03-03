@@ -1,6 +1,9 @@
 /**
  * Character List Controller
  */
-angular.module('CharacterList').controller('CharacterListController', function($scope, characters) {
-    $scope.characters = characters;
+angular.module('CharacterList').controller('CharacterListController',
+  function($scope, $location, characterService) {
+    characterService.getCharacters().then(function(characters){
+      $scope.characters = characters;
+    });
 });
