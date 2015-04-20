@@ -1,7 +1,7 @@
 /**
  * Fetches character data from the API
  */
-angular.module('CharacterList').factory('characterService', function($http, $q) {
+angular.module('ubt.marvel').factory('characterService', function($http, $q) {
   return {
     // List
     getCharacters: function() {
